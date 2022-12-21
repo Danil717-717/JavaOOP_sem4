@@ -1,9 +1,7 @@
 package util;
 
+import data.StudentGroup;
 import data.User;
-
-import java.io.BufferedReader;
-import java.io.FileWriter;
 
 public class ReaderFromTxt {
 

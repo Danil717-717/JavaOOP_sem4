@@ -1,13 +1,15 @@
 package service;
 
+
 import data.User;
 import util.ReaderFromTxt;
 import util.WriterToTxt;
 
-public class TeacherServiceImplement implements DataService{
+public abstract class TeacherServiceImplement implements DataService{
 
     @Override
     public void create(User user) {
+
         WriterToTxt.write(user);
     }
 
