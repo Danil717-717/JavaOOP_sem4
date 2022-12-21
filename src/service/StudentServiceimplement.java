@@ -12,8 +12,8 @@ public class StudentServiceimplement  implements DataService{
     }
 
     @Override
-    public void read(User user) {
-        ReaderFromTxt.read(user);
+    public User read(User user) {
+        return ReaderFromTxt.read(user);
 
     }
 }

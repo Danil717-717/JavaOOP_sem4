@@ -9,7 +9,7 @@ public class StudentView extends UserView{
 
     @Override
     protected User findTheBest(List<User> userList) {
-        //логика студентов
+        //логика студентов по реализации поиска лучшего студента
         return null;
     }
 

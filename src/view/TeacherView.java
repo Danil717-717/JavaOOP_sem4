@@ -7,7 +7,7 @@ import java.util.List;
 public class TeacherView extends UserView{
     @Override
     protected User findTheBest(List<User> userList) {
-        //логика для учителей
+        //логика для учителей по реализации поиска лучшего студента
         return null;
     }
 }
