@@ -7,4 +7,19 @@ public class Student extends User{
         super(fio, age, pass);
         this.groupNumber = groupNumber;
     }
+    public int getGroupNumber(){
+        return groupNumber;
+    }
+
+    public void setGroupNumber(int groupNumber) {
+        this.groupNumber = groupNumber;
+    }
+
+    public int compareTo(Student student){
+        if(student.getAge() < this.getAge())
+            return 1;
+        if(student.getAge() > this.getAge())
+            return  -1;
+        return 0;
+    }
 }

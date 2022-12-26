@@ -1,11 +1,16 @@
 package service;
 
 
+import data.Student;
 import data.StudentGroup;
 
+import data.comparators.UserComparator;
 import util.ReaderFromStudentGrTxt;
 
 import util.WriterStudentGrToTxt;
+
+import java.util.Collections;
+import java.util.List;
 
 
 public abstract class StudentGroupServiceimplement implements DataService{
@@ -20,5 +25,7 @@ public abstract class StudentGroupServiceimplement implements DataService{
         return ReaderFromStudentGrTxt.read(studentGroup);
 
     }
+
+    //Collections.sort(List<Student>,new UserComparator());
 
 }

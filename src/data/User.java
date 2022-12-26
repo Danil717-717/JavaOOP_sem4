@@ -18,4 +18,20 @@ public abstract class User {
         this.age = age;
         this.pass = pass;
     }
+
+    public String getFio() {
+        return fio;
+    }
+
+    public void setFio(String fio) {
+        this.fio = fio;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
