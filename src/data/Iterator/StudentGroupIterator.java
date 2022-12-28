@@ -6,14 +6,17 @@
  */
 
 
-package data;
+package data.Iterator;
+
+import data.Student;
+import data.StudentGroup;
 
 import java.util.Iterator;
 import java.util.List;
 
 public class StudentGroupIterator implements Iterator<Student> {
 
-    private  StudentGroup studentGroup;
+    private StudentGroup studentGroup;
 
     //private Iterator<Student> students;
     private List<Student> students;

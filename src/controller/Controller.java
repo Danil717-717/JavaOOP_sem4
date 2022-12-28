@@ -1,12 +1,17 @@
 package controller;
 
+import data.GroupStream;
 import data.Student;
 import data.StudentGroup;
 import data.Teacher;
+import data.comparators.GroupStreamComparator;
 import service.DataService;
 import service.StudentServiceimplement;
 import service.TeacherServiceImplement;
 import service.StudentGroupServiceimplement;
+
+import java.util.Collections;
+import java.util.List;
 
 public class Controller {
 
@@ -17,7 +22,12 @@ public class Controller {
 
     private DataService groupNumber;
 
-
+    public Controller(DataService studentServiceimplement, DataService teacherServiceimplement, DataService studentGroupServiceimplement, DataService groupNumber) {
+        this.studentServiceimplement = studentServiceimplement;
+        this.teacherServiceimplement = teacherServiceimplement;
+        this.studentGroupServiceimplement = studentGroupServiceimplement;
+        this.groupNumber = groupNumber;
+    }
 
     public Controller(StudentServiceimplement studentServiceimplement){
         this.studentServiceimplement = studentServiceimplement;                       // инициализировали student
@@ -53,5 +63,9 @@ public class Controller {
     public StudentGroup createGroup(int groupNumber){
         return (StudentGroup) studentGroupServiceimplement.createGroups(groupNumber);
 
+    }
+
+    public void streamSort(List<GroupStream> groupStream) {
+        Collections.sort(groupStream, new GroupStreamComparator());
     }
 }
