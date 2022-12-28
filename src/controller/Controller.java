@@ -1,10 +1,8 @@
 package controller;
 
-import data.GroupStream;
-import data.Student;
-import data.StudentGroup;
-import data.Teacher;
+import data.*;
 import data.comparators.GroupStreamComparator;
+import repository.UserRepository;
 import service.DataService;
 import service.StudentServiceimplement;
 import service.TeacherServiceImplement;
@@ -13,7 +11,7 @@ import service.StudentGroupServiceimplement;
 import java.util.Collections;
 import java.util.List;
 
-public class Controller {
+public class Controller  <T,I>{
 
     private DataService studentServiceimplement;                                        // создали переменную
     private DataService teacherServiceimplement;                                       // создали переменную
@@ -68,4 +66,24 @@ public class Controller {
     public void streamSort(List<GroupStream> groupStream) {
         Collections.sort(groupStream, new GroupStreamComparator());
     }
+
+
+
+
+
+    public Teacher saveTeacher(Teacher entity) {
+        return null;
+    }
+
+
+    public Teacher findTeacherById(Integer id) {
+        return null;
+    }
+
+    public Teacher findTeacherByFio(String fio) {
+        return null;
+    }
+
+
+
 }

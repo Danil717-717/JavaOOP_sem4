@@ -1,19 +1,27 @@
 package service;
 
 
-import data.Student;
 import data.StudentGroup;
-
-import data.comparators.UserComparator;
+import repository.Repository;
 import util.ReaderFromStudentGrTxt;
-
 import util.WriterStudentGrToTxt;
 
-import java.util.Collections;
-import java.util.List;
 
+public abstract class StudentGroupServiceimplement implements DataService {
 
-public abstract class StudentGroupServiceimplement implements DataService{
+    private final Repository<StudentGroup, Integer> studentGroupIntegerRepository;
+
+    protected StudentGroupServiceimplement(Repository<StudentGroup, Integer> studentGroupIntegerRepository) {
+        this.studentGroupIntegerRepository = studentGroupIntegerRepository;
+    }
+
+    public StudentGroup saveGroup(StudentGroup studentGroup) {
+        return studentGroupIntegerRepository.save(studentGroup);
+    }
+
+    public StudentGroup searchGroup(int groupNumber) {
+        return studentGroupIntegerRepository.findById(groupNumber);
+    }
 
 
     public void create(StudentGroup studentGroup) {

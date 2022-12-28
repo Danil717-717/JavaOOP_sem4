@@ -3,7 +3,7 @@ package service;
 import data.StudentGroup;
 import data.User;
 
-public interface DataService {
+public interface DataService <T extends User>{
 
     void create(User user);
 
