@@ -1,24 +1,30 @@
 package controller;
 
 import data.Student;
+import service.StudentService;
 import service.StudentServiceimplement;
 
 public class StudentController extends Controller<Student, Integer> {
+
+    private StudentService studentService;
+
     public StudentController(StudentServiceimplement studentServiceimplement) {
         super(studentServiceimplement);
     }
 
+
+    public Student create(Student entity) {return studentService.createUser(entity);}
+
     public Student saveStudent(Student entity) {
-        return null;
+        return studentService.saveStudent(entity);
     }
 
-
     public Student findStudentById(Integer id) {
-        return null;
+        return studentService.findStudentById(id);
     }
 
 
     public Student findStudentByFio(String fio) {
-        return null;
+        return studentService.findStudentByFio("fio");
     }
 }

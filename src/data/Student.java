@@ -22,4 +22,8 @@ public class Student extends User{
             return  -1;
         return 0;
     }
+
+    public Student(String fio){
+        super(fio);
+    }
 }

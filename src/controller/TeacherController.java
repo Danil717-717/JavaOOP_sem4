@@ -1,26 +1,30 @@
 package controller;
 
-
 import data.Teacher;
+import service.TeacherService;
 import service.TeacherServiceImplement;
 
-public class TeacherController extends Controller<Teacher, Integer>{
+public class TeacherController extends Controller<Teacher, Integer> {
+
+    private TeacherService teacherService;
+
     public TeacherController(TeacherServiceImplement teacherServiceImplement) {
         super(teacherServiceImplement);
+    }
 
-
+    public Teacher create(Teacher entity) {
+        return teacherService.createUser(entity);
     }
 
     public Teacher saveTeacher(Teacher entity) {
-        return null;
+        return teacherService.saveTeacher(entity);
     }
 
-
     public Teacher findTeacherById(Integer id) {
-        return null;
+        return teacherService.findTeacherById(id);
     }
 
     public Teacher findTeacherByFio(String fio) {
-        return null;
+        return teacherService.findTeacherByFio("fio");
     }
 }

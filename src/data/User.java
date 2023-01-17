@@ -19,6 +19,10 @@ public abstract class User {
         this.pass = pass;
     }
 
+    public User(String fio) {
+        this.fio = fio;
+    }
+
     public String getFio() {
         return fio;
     }
