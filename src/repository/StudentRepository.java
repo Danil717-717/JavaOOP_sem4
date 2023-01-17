@@ -17,4 +17,6 @@ public class StudentRepository implements UserRepository<Student,Integer> {
     public Student findByFio(String fio) {
         return null;
     }
+
+    public Student deleteStudentFioAge(Student student, String fio, int age, int groupNumber) {return null;}
 }

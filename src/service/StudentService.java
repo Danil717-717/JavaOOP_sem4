@@ -32,5 +32,9 @@ public class StudentService {
     public void deleteStudent(Student student) {
     }
 
+    public Student deleteStudentFioAge(Student student, String fio, int age, int groupNumber) {
+        return studentRepository.deleteStudentFioAge(student, fio, age, groupNumber);
+    }
+
 
 }
