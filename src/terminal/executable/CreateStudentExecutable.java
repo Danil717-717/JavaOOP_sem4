@@ -14,9 +14,16 @@ public class CreateStudentExecutable implements CommandExecutable {
         this.student = student;
     }
 
+    public CreateStudentExecutable(String firstArgument) {
+    }
+
 
     @Override
     public void execute() {
         studentService.saveStudent(student);
+    }
+
+    public Student CreateStudentExecutable() {
+        return null;
     }
 }

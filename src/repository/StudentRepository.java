@@ -1,9 +1,22 @@
 package repository;
 
 import data.Student;
+import db.StudentTable;
 
 
 public class StudentRepository implements UserRepository<Student,Integer> {
+
+    private StudentTable studentTable;
+
+    public StudentRepository(){
+
+    }
+
+    public StudentRepository(StudentTable studentTable) {
+        this.studentTable = studentTable;
+    }
+
+
 
     @Override
     public Student save(Student entity) {
