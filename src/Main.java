@@ -42,10 +42,21 @@
  */
 
 
+import repository.StudentRepository;
+import service.StudentService;
+import terminal.*;
 
 public class Main {
     public static void main(String[] args) {
+        StudentRepository repository = new StudentRepository();
+        StudentService service = new StudentService(repository);
+        CommandExecutableFactory factory = new CommandExecutableFactoryImpl(service);
+        CommandParser parser = new CommandParserImpl();
+        //ResultView view = new ResultViewImpl();
 
-        System.out.println("Hello world!");
+        //Menu.display();
+        TerminalReader.getInstance(parser, factory);
+                //.run();
     }
+
 }

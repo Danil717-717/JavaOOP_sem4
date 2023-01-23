@@ -35,25 +35,15 @@ public class CommandExecutableFactoryImpl implements CommandExecutableFactory{
     }
 
     public CommandExecutable create (Command command){
-        Student student = new CreateStudentExecutable(command.getFirstArgument()).CreateStudentExecutable();
+        Student student = new Student(command.getFirstArgument());
+
         if (command.isCreateCommand() && student != null){
-            return  new CreateStudentExecutable(new StudentService(new StudentRepository()),student);
+            return  new CreateStudentExecutable(new StudentService(new StudentRepository()),studentService);
         } else if (command.isDeleteCommand() && student != null) {
-            return new DeleteStudentExecutable(new StudentService(new StudentRepository()),student);
+            return new DeleteStudentExecutable(new StudentService(new StudentRepository()),studentService);
         }else
             return new NoneCommandExecutable();
 
-        //if(input[0].equals("/add")){
-         //   return new CreateStudentExecutable(
-         //           studentService, new Student(input[1] ));
-        //}
-        //if(input[0].equals("/del")){
-        //    return new DeleteStudentExecutable(studentService, new Student(input[1] ));
-        //}
-        //if(input[0].equals("/dellAge")) {
-        //    return new DeleteStudentExecutableFioAge(studentService, new Student(input[1]), age, groupNumber);
-        //}
-        //return null;
 
     }
 

@@ -8,6 +8,7 @@
 
 package terminal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Command {
@@ -18,6 +19,16 @@ public class Command {
 
     private List<String> arguments;
     private String mainFirstCommand;
+
+    public Command(List<String> commands) {
+        this.mainFirstCommand = commands.get(0);
+        this.arguments = new ArrayList<>(commands);
+
+        if (arguments.size() > 0) {
+            arguments.remove(0);
+        }
+    }
+
 
     public String getFirstArgument(){
         return arguments.get(0);

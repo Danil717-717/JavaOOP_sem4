@@ -14,6 +14,9 @@ public class DeleteStudentExecutable implements CommandExecutable {
         this.student = student;
     }
 
+    public DeleteStudentExecutable(StudentService studentService, StudentService studentService1) {
+    }
+
 
     @Override
     public void execute() {

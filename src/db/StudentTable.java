@@ -10,11 +10,21 @@
 package db;
 
 import data.Student;
-import repository.StudentRepository;
+
 
 public class StudentTable extends Table<Student> {
 
-    public boolean removeByName (String fio){
+    public boolean createByFio (String fio){
+        for(Student student: element){
+            if(student.getFio().equals(fio)){
+                element.add(student);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean deleteByFio (String fio){
         for(Student student: element){
             if(student.getFio().equals(fio)){
                 element.remove(student);

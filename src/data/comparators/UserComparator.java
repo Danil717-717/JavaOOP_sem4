@@ -10,7 +10,6 @@
 package data.comparators;
 
 import data.Student;
-import data.User;
 
 import java.util.Comparator;
 

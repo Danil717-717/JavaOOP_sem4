@@ -17,13 +17,16 @@ public class CreateStudentExecutable implements CommandExecutable {
     public CreateStudentExecutable(String firstArgument) {
     }
 
+    public CreateStudentExecutable(StudentService studentService, StudentService studentService1) {
+    }
+
 
     @Override
     public void execute() {
         studentService.saveStudent(student);
     }
 
-    public Student CreateStudentExecutable() {
-        return null;
-    }
+    //public Student CreateStudentExecutable() {
+     //   return null;
+    //}
 }

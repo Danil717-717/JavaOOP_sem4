@@ -18,9 +18,18 @@ public class StudentRepository implements UserRepository<Student,Integer> {
 
 
 
-    @Override
-    public Student save(Student entity) {
-        return null;
+//    @Override
+//    public Student save(Student entity) {
+//        Student student = studentTable.createByFio(entity.getFio());
+//        return
+//    }
+
+    public Student save(Student entity){
+        studentTable.createByFio(entity.getFio());
+        return entity;
+    }
+    public void delete(Student entity){
+        studentTable.deleteByFio(entity.getFio());
     }
 
     @Override

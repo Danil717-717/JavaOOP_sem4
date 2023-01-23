@@ -14,9 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Table <E>{
-    protected List<E> element = new ArrayList<>();
+    protected List<E> element;
 
-    public Table(){
+    protected Table(){
         element = new ArrayList<>();
     }
 

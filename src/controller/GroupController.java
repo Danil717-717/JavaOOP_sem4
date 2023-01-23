@@ -1,7 +1,6 @@
 package controller;
 
 import data.StudentGroup;
-import data.Teacher;
 import service.StudentGroupServiceimplement;
 
 public class GroupController extends Controller<StudentGroup, Integer>{
